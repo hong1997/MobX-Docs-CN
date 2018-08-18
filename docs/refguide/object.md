@@ -41,7 +41,7 @@ person.setAge(21);
 
 当使对象转变成 observable 时，需要记住一些事情:
 
-* 当通过 `observable` 传递对象时，只有在把对象转变 observable 时存在的属性才会是可观察的。
+* [对于MobX 4  或者更低版本] 当通过 `observable` 传递对象时，只有在把对象转变 observable 时存在的属性才会是可观察的。
 稍后添加到对象的属性不会变为可观察的，除非使用 [`set`](object-api.md) 或 [`extendObservable`](extend-observable.md)。
 * 只有普通的对象可以转变成 observable 。对于非普通对象，构造函数负责初始化 observable 属性。
 要么使用 [`@observable`](observable.md) 注解，要么使用 [`extendObservable`](extend-observable.md) 函数。
